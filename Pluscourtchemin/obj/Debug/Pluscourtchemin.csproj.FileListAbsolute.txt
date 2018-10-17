@@ -1,0 +1,9 @@
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.pdb
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csprojResolveAssemblyReference.cache
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Form1.resources
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
