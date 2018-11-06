@@ -7,3 +7,12 @@ C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Plus
 C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
 C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
 C:\Users\anctrang\Downloads\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+H:\2A\IA\projet_IA\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
+H:\2A\IA\projet_IA\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+H:\2A\IA\projet_IA\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+H:\2A\IA\projet_IA\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe
+H:\2A\IA\projet_IA\Pluscourtchemin\bin\Debug\Pluscourtchemin.pdb
+H:\2A\IA\projet_IA\Pluscourtchemin\obj\Debug\Pluscourtchemin.csprojResolveAssemblyReference.cache
+H:\2A\IA\projet_IA\Pluscourtchemin\obj\Debug\Pluscourtchemin.Form1.resources
+H:\2A\IA\projet_IA\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
+H:\2A\IA\projet_IA\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache

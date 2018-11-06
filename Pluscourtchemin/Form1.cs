@@ -167,28 +167,7 @@ namespace Pluscourtchemin
         public bool verifierEntreeTextBox()
         {
             bool acceptable = true;
-            int cpt = 0;
-            int cpt2 = 0;
-
-            /*while (this.textBoxO.Text[cpt] != '}')
-            {
-                if(this.textBoxO.Text[cpt] ==' ')
-                {
-                   cpt2 = cpt;
-                   while(cpt2< this.textBoxO.Text.Count() - 2) 
-                    
-                    {
-                        this.textBoxO.Text[cpt2] = this.textBoxO.Text[cpt2 + 1];
-                        cpt2++;
-                    }
-                    this.textBoxO.Text[]='':
-                }
-                else
-                {
-                    cpt++;
-                }
-
-            }*/
+          
 
 
             if (this.textBoxO.Text[0] != '{' || this.textBoxF.Text[0] != '{' || this.textBoxO.Text[textBoxO.Text.Count() - 1] != '}' ||
@@ -198,14 +177,20 @@ namespace Pluscourtchemin
             }
 
         
-            for (int i = 1; i < textBoxO.Text.Count(); i = 1 + 2)
+            for (int i = 1; i < textBoxO.Text.Count(); i = i + 2)
             {
-                if (this.textBoxO.Text[i] < 65 || this.textBoxO.Text[i] > 90 && this.textBoxO.Text[i] < 97 || this.textBoxO.Text[i] > 122)
-                // On vérifie si tous les caractères impairs sont bien des lettres (gestion ascii + maj/min)
-                {
-                    acceptable = false;
+                if (this.textBoxO.Text.Count() != 2) {
+                    if (this.textBoxO.Text[i] < 65 || this.textBoxO.Text[i] > 90 && this.textBoxO.Text[i] < 97 || this.textBoxO.Text[i] > 122 )
+                    // On vérifie si tous les caractères impairs sont bien des lettres (gestion ascii + maj/min)
+                    {
+                        acceptable = false;
+                        
+
+                    }
                 }
             }
+
+            Console.WriteLine(acceptable);
 
             return acceptable;
         }
@@ -219,6 +204,7 @@ namespace Pluscourtchemin
                 reponses[1].Add(this.textBoxF.Text);
                 this.listBoxRep.Items.Add("F =" + reponses[0][etape] + "\t O=" + reponses[1][etape]);
                 etape++;
+                
             }
 
 
