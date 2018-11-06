@@ -148,27 +148,10 @@ namespace Pluscourtchemin
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
+       
         public bool verifierEntreeTextBox()
         {
-            bool acceptable = true;
-          
-
+            bool acceptable = true;    
 
             if (this.textBoxO.Text[0] != '{' || this.textBoxF.Text[0] != '{' || this.textBoxO.Text[textBoxO.Text.Count() - 1] != '}' ||
                 this.textBoxF.Text[textBoxF.Text.Count() - 1] != '}') // On teste si les premiers et derniers caractères des textbox sont bien des accolades
@@ -176,43 +159,111 @@ namespace Pluscourtchemin
                 acceptable = false;
             }
 
-        
-            for (int i = 1; i < textBoxO.Text.Count(); i = i + 2)
+
+            if (this.textBoxO.Text.Count() > 3)
             {
-                if (this.textBoxO.Text.Count() != 2) {
-                    if (this.textBoxO.Text[i] < 65 || this.textBoxO.Text[i] > 90 && this.textBoxO.Text[i] < 97 || this.textBoxO.Text[i] > 122 )
-                    // On vérifie si tous les caractères impairs sont bien des lettres (gestion ascii + maj/min)
+                for (int i=2; i<textBoxO.Text.Count()-2; i=i+2)
+                {
+                    if(this.textBoxO.Text[i]!=44 && this.textBoxO.Text[i]!=46 && this.textBoxO.Text[i]!=58 && this.textBoxO.Text[i]!=59)
                     {
                         acceptable = false;
-                        
-
                     }
                 }
             }
 
-            Console.WriteLine(acceptable);
+            if (this.textBoxF.Text.Count() > 3)
+            {
+                for (int i = 2; i < textBoxF.Text.Count()-2; i = i + 2)
+                {
+                    if (this.textBoxF.Text[i] != 44 && this.textBoxF.Text[i] != 46 && this.textBoxF.Text[i] != 58 && this.textBoxF.Text[i] != 59)
+                    {
+                        acceptable = false;
+                    }
+                }
+            }
 
+
+            for (int i = 1; i < textBoxO.Text.Count(); i = i + 2)
+            {
+                if (this.textBoxO.Text.Count() != 2) { // On vérifie la taille du stirng, s'il est "vide" pas besoin de faire la condition prochaine
+                    if (this.textBoxO.Text[i] < 65 || this.textBoxO.Text[i] > 90 && this.textBoxO.Text[i] < 97 || this.textBoxO.Text[i] > 122 )
+                    // On vérifie si tous les caractères impairs sont bien des lettres (gestion ascii + maj/min)
+                    {
+                        acceptable = false;               
+                    }
+                }
+            }
+
+            for (int i = 1; i < textBoxF.Text.Count(); i = i + 2)
+            {
+                if (this.textBoxF.Text.Count() != 2)
+                { // On vérifie la taille du stirng, s'il est "vide" pas besoin de faire la condition prochaine
+                    if (this.textBoxF.Text[i] < 65 || this.textBoxF.Text[i] > 90 && this.textBoxF.Text[i] < 97 || this.textBoxF.Text[i] > 122)
+                    // On vérifie si tous les caractères impairs sont bien des lettres (gestion ascii + maj/min)
+                    {
+                        acceptable = false;
+                    }
+                }
+            }
             return acceptable;
         }
+
+        private string UniformisationReponse(string reponse)
+        {
+
+            char[] reponseEnTableauDeChar = reponse.ToCharArray(); // String immuable
+            // passage obligatoire en tableau de char  
+            if(reponse.Count() > 2)
+            {
+                for(int i=1; i < reponse.Count()-1; i++)
+                {
+                    if (i % 2 == 1) // Si on est sur une lettre
+                    {
+                        if (reponse[i] > 96) // Si minuscule
+                        {
+                            reponseEnTableauDeChar[i] = (char)((int)reponse[i] - 32); // Transformation en majuscule
+                        }
+                    }
+
+                    else
+                    {
+                        if (reponse[i]!=44) // Si minuscule
+                        {
+                            reponseEnTableauDeChar[i] = (char)44; // Transformation en majuscule
+                        }
+                    }
+                    
+                    
+                }
+            }
+            return new string(reponseEnTableauDeChar);
+        }
+
+
 
         private void buttonNouvelleEtape_Click(object sender, EventArgs e)
         {
 
             if (verifierEntreeTextBox())
             {
-                reponses[0].Add(this.textBoxO.Text);
-                reponses[1].Add(this.textBoxF.Text);
+
+                reponses[0].Add(UniformisationReponse(this.textBoxO.Text));
+                reponses[1].Add(UniformisationReponse(this.textBoxF.Text));
                 this.listBoxRep.Items.Add("F =" + reponses[0][etape] + "\t O=" + reponses[1][etape]);
                 etape++;
                 
             }
 
+            else
+            {
+                MessageBox.Show("L'une des entrées est incorrecte ! Veuillez re-vérifer");
+                this.textBoxO.Text = "{}";
+                this.textBoxF.Text = "{}";
+            }
+
 
         }
 
-        private void textBoxO_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

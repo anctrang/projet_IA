@@ -97,7 +97,6 @@
             this.labelDepart.Size = new System.Drawing.Size(69, 21);
             this.labelDepart.TabIndex = 4;
             this.labelDepart.Text = "Départ";
-            this.labelDepart.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelArrivee
             // 
@@ -168,7 +167,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(413, 260);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -179,7 +177,6 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Faites tourner l\'algorithme de Dijkstra et remplir les textbox si dessous étape p" +
     "ar étape";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBoxO
             // 
@@ -188,7 +185,7 @@
             this.textBoxO.Size = new System.Drawing.Size(100, 20);
             this.textBoxO.TabIndex = 14;
             this.textBoxO.Text = "{}";
-            this.textBoxO.TextChanged += new System.EventHandler(this.textBoxO_TextChanged);
+        
             // 
             // textBoxF
             // 
